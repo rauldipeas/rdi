@@ -6,6 +6,7 @@ wget -q --show-progress -O emulationstation-de_x64.deb $(wget -qO- https://es-de
 pkcon install-local emulationstation-de_x64.deb
 
 # Instalação do tema EpicNoir para o EmulationStation
+pkcon install git
 mkdir -p "$HOME"/.emulationstation/themes
 git clone -q https://github.com/dragoonDorise/es-theme-epicnoir "$HOME"/.emulationstation/themes/epicnoir
 
