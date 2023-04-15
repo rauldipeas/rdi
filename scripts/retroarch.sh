@@ -10,6 +10,10 @@ pkcon install git
 mkdir -p "$HOME"/.emulationstation/themes
 git clone -q https://github.com/dragoonDorise/es-theme-epicnoir "$HOME"/.emulationstation/themes/epicnoir
 
+# Instalação do deb-get
+bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
+pkcon install deb-get
+
 # Instalação do RetroArch
 deb-get install retroarch
 
