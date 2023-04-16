@@ -15,4 +15,4 @@ rm ./logmein-hamachi_*_armhf.deb
 
 # Configuração do Hamachi
 #sudo hamachi login
-#sudo hamachi attach-net rauldipeas@disroot.org
+#sudo hamachi attach-net mail@domain.com
