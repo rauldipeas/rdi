@@ -2,8 +2,8 @@
 set -e
 
 # Instalação do Hamachi
+sudo add-apt-repository -n ppa:ztefn/haguichi-stable
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-sudo add-apt-repository ppa:ztefn/haguichi-stable
 pkcon install haguichi logmein-hamachi
 
 # Configuração da permissão de execução

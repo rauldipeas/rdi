@@ -12,3 +12,4 @@ pkcon install papirus-icon-theme papirus-folders
 # Tema Papirus para o LibreOffice
 wget -cq --show-progress https://launchpad.net/~papirus/+archive/ubuntu/papirus/+files/libreoffice-style-papirus_20180413-46+pkg3~ubuntu20.04.1_all.deb
 pkcon install-local ./libreoffice-style-papirus_20180413-46+pkg3~ubuntu20.04.1_all.deb
+rm ./libreoffice-style-papirus_20180413-46+pkg3~ubuntu20.04.1_all.deb
