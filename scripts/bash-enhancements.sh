@@ -2,6 +2,7 @@
 set -e
 
 # bashrc.d
+mkdir -p "$HOME"/.bashrc.d
 sed -i '/^# bashrc.d/{N;N;N;d;}' "$HOME"/.bashrc
 cat <<EOF |tee -a "$HOME"/.bashrc>/dev/null
 # bashrc.d
