@@ -16,13 +16,11 @@ bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/mai
 pkcon install\
     apt-rollback\
     deborphan\
-    deb-get\
+    fd\
     gcp\
     git\
     lnav\
+    lsd\
     pet\
     rmtrash\
     silversearcher-ag
-deb-get install\
-    fd\
-    lsd
