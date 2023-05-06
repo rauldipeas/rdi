@@ -1,10 +1,6 @@
 #!/bin/bash
 set -e
 
-# Instalação do deb-get
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install deb-get
-
 # Instalação do GCC 12
 if [ -f /usr/bin/mainline ]; then
     pkcon install gcc-12
@@ -17,7 +13,8 @@ if [ -f /usr/bin/mainline ]; then
 fi
 
 # Instalação do Iriun Webcam
-deb-get install iriunwebcam
+bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
+pkcon install iriunwebcam
 
 # Correção no ícone do lançador
 cat <<EOF| sudo tee /etc/apt/apt.conf.d/100iriunwebcam-icon>/dev/null
