@@ -35,3 +35,13 @@ Exec=thunderbird -compose
 Name=Contatos
 Exec=thunderbird -addressbook
 EOF
+
+# Instalação do Birdtray
+wget -q --show-progress https://ppa.launchpadcontent.net/linuxuprising/ppa/ubuntu/pool/main/b/birdtray/$(wget -qO- https://ppa.launchpadcontent.net/linuxuprising/ppa/ubuntu/pool/main/b/birdtray/|grep jammy|grep amd64.deb|cut -d '"' -f8|tail -n1)
+dpkg-deb -x birdtray*.deb birdtray
+sudo cp birdtray/usr/bin/birdtray /opt/thunderbird/
+sudo ln -fs /opt/thunderbird/birdtray /usr/local/bin/birdtray
+sudo cp birdtray/usr/share/applications/com.ulduzsoft.Birdtray.desktop /usr/local/share/applications/
+sudo cp -r birdtray/usr/share/icons /usr/loca/share/
+sudo cp -r birdtray/usr/share/ulduzsoft /usr/local/share/
+wget -q --show-progress -O "$HOME"/.config/birdtray-config.json https://raw.githubusercontent.com/rauldipeas/respin-rdx/main/assets/birdtray/birdtray-config.json
