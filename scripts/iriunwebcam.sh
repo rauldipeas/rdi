@@ -17,6 +17,6 @@ bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/mai
 pkcon install iriunwebcam
 
 # Correção no ícone do lançador
-cat <<EOF| sudo tee /etc/apt/apt.conf.d/100iriunwebcam-icon>/dev/null
+cat <<EOF |sudo tee /etc/apt/apt.conf.d/100iriunwebcam-icon>/dev/null
 DPkg::Post-Invoke {"sed -i 's/Icon=iriunwebcam/Icon=webcamoid/g' /usr/share/applications/iriunwebcam.desktop";};
 EOF
