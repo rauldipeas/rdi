@@ -9,7 +9,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/mai
 pkcon install liquidprompt
 cp /usr/share/liquidprompt/liquidpromptrc-dist .config/liquidpromptrc
 sed -i 's/debian.theme/powerline.theme/g' "$HOME"/.config/liquidpromptrc
-cat <<EOF |"$HOME"/.bashrc.d/liquidprompt.bash>/dev/null
-echo \$- | grep -q i 2>/dev/null && . /usr/share/liquidprompt/liquidprompt
+cat <<EOF |tee "$HOME"/.bashrc.d/liquidprompt.bash>/dev/null
+echo \$-|grep -q i 2>/dev/null&&. /usr/share/liquidprompt/liquidprompt
 lp_theme powerline
 EOF
