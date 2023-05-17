@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+
 # Instalação do Audacity
 pkcon install audacity
 mkdir -p "$HOME"/.audacity-data/Theme
