@@ -2,7 +2,7 @@
 set -e
 
 # Instalação do Telegram
-wget -cq --show-progress -O telegram.tar.xz $(wget -qO- https://api.github.com/repos/telegramdesktop/tdesktop/releases|grep browser_download_url|grep tar.xz|head -n1|cut -d '"' -f4)
+wget -cq --show-progress -O telegram.tar.xz "$(wget -qO- https://api.github.com/repos/telegramdesktop/tdesktop/releases|grep browser_download_url|grep tar.xz|head -n1|cut -d '"' -f4)"
 tar fx telegram.tar.xz
 sudo mkdir -p /opt/Telegram
 sudo chmod 777 /opt/Telegram
