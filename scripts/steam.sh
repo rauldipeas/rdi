@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 # Instalação da Steam
-wget -q --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+wget -cq --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 pkcon install-local ./steam.deb
 
 # Instalação do MangoHud
-wget -q --show-progress "$(wget -qO- https://api.github.com/repos/flightlessmango/MangoHud/releases|grep browser_download_url|grep tar.gz|head -n1|cut -d '"' -f4)"
+wget -cq --show-progress "$(wget -qO- https://api.github.com/repos/flightlessmango/MangoHud/releases|grep browser_download_url|grep tar.gz|head -n1|cut -d '"' -f4)"
 tar fxz MangoHud*.tar.gz
 cd MangoHud
 ./mangohud-setup.sh install
