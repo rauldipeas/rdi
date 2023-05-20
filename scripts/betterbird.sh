@@ -44,9 +44,9 @@ set -e
 betterbird "\$@"&
 if [ "\$(pgrep kdocker)" ];then
 	killall -9 kdocker
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-mq betterbird
+	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-d10 -mq betterbird
 	else
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-mq betterbird
+	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-d10 -mq betterbird
 fi
 EOF
 sudo chmod +x /opt/betterbird/betterbird-kdocker
