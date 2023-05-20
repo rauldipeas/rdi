@@ -2,7 +2,7 @@
 set -e
 
 # Instalação do Firefox
-wget -q --show-progress -O firefox-latest-linux64-pt-br.tar.bz2 "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=pt-BR"
+wget -cq --show-progress -O firefox-latest-linux64-pt-br.tar.bz2 'https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=pt-BR'
 tar fjx firefox-latest-linux64-pt-br.tar.bz2
 sudo mkdir -p /opt/firefox
 sudo chmod 777 /opt/firefox
