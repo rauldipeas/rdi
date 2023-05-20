@@ -16,11 +16,11 @@ export PIPX_BIN_DIR='/opt/pipx/bin'
 # Instalação do rtcqs
 sudo apt install python3-tk
 pipx install rtcqs
-sudo wget -q --show-progress -O /usr/share/applications/rtcqs.desktop https://github.com/autostatic/rtcqs/raw/main/rtcqs.desktop
-sudo wget -q --show-progress -O /usr/share/icons/rtcqs.svg https://github.com/autostatic/rtcqs/raw/main/rtcqs_logo.svg
+sudo wget -cq --show-progress -O /usr/share/applications/rtcqs.desktop https://github.com/autostatic/rtcqs/raw/main/rtcqs.desktop
+sudo wget -cq --show-progress -O /usr/share/icons/rtcqs.svg https://github.com/autostatic/rtcqs/raw/main/rtcqs_logo.svg
 
 # CPU DMA latency
-sudo wget -q --show-progress -O /etc/udev/rules.d/99-cpu-dma-latency.rules https://raw.githubusercontent.com/Ardour/ardour/master/tools/udev/99-cpu-dma-latency.rules
+sudo wget -cq --show-progress -O /etc/udev/rules.d/99-cpu-dma-latency.rules https://raw.githubusercontent.com/Ardour/ardour/master/tools/udev/99-cpu-dma-latency.rules
 
 # Audio group
 sudo usermod -aG audio "$USER"
