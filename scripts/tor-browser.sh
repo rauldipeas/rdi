@@ -2,7 +2,7 @@
 set -e
 
 # Instalação do Tor
-wget -cq --show-progress -O tor-browser-linux64-stable_ALL.tar.xz https://www.torproject.org/dist/torbrowser/12.0.6/tor-browser-linux64-12.0.6_ALL.tar.xz
+wget -cq --show-progress -O tor-browser-linux64-stable_ALL.tar.xz https://www.torproject.org"$(wget -qO- https://www.torproject.org/pt-BR/download/|grep linux64|head -n1|cut -d '"' -f4)"
 tar fx tor-browser-linux64-stable_ALL.tar.xz
 sudo mkdir -p /opt/tor-browser
 sudo chmod 777 /opt/tor-browser
