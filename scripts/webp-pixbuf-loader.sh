@@ -5,5 +5,5 @@ set -e
 if [ -f /usr/share/xsessions/xubuntu.desktop ]; then
     sudo add-apt-repository ppa:helkaluin/webp-pixbuf-loader
     pkcon install webp-pixbuf-loader
-    rm -rfv "$HOME"/.cache/thumbnails
+    rm -rf "$HOME"/.cache/thumbnails
 fi
