@@ -5,7 +5,7 @@ set -e
 BLENDER_VER=$(wget -qO- https://ftp.nluug.nl/pub/graphics/blender/release|grep Blender3.|tail -n1|cut -d \" -f6)
 BLENDER_FILE=$(wget -qO- https://ftp.nluug.nl/pub/graphics/blender/release/"$BLENDER_VER"|grep .tar.xz|tail -n1|cut -d \" -f6)
 wget -c https://ftp.nluug.nl/pub/graphics/blender/release/"$BLENDER_VER""$BLENDER_FILE"
-tar -xf blender*.tar.xz
+tar fx blender*.tar.xz
 sudo mkdir -p /opt/blender
 sudo chmod 777 /opt/blender
 sudo mv blender*/* /opt/blender/
