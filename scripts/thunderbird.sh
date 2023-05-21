@@ -40,9 +40,9 @@ set -e
 thunderbird "\$@"&
 if [ "\$(pgrep kdocker)" ];then
 	killall -9 kdocker
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d10 -mq thunderbird
+	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d15 -mq thunderbird
 	else
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d10 -mq thunderbird
+	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d15 -mq thunderbird
 fi
 EOF
 sudo chmod +x /opt/thunderbird/thunderbird-kdocker
