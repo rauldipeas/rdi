@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+
 # Instalação da Steam
 wget -cq --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
 pkcon install-local ./steam.deb
