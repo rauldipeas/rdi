@@ -10,4 +10,7 @@ if [ -d /usr/share/icons/Papirus ]; then
  
     # Correção dos ícones na área de notificação
     sudo hardcode-tray --apply --theme Papirus-Dark
+    else
+    bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/rdi/main/rdi.sh) papirus
+    bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/rdi/main/rdi.sh) hardcode-tray
 fi
