@@ -2,7 +2,7 @@
 set -e
 
 # Instalação do JamesDSP
-wget -qO- https://thepbone.github.io/PPA-Repository/KEY.gpg|sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/thepbone_ppa.gpg>/dev/null
+wget -qO- https://thepbone.github.io/PPA-Repository/KEY.gpg|sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/thepbone_ppa.gpg
 echo 'deb [arch=amd64] https://thepbone.github.io/PPA-Repository ./'|sudo tee /etc/apt/sources.list.d/thepbone_ppa.list>/dev/null
 pkcon refresh
 pkcon install jamesdsp-pulse
