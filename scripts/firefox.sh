@@ -11,63 +11,8 @@ sudo mkdir -p /usr/local/bin /usr/local/share/applications /usr/local/share/pixm
 sudo ln -fs /opt/firefox/firefox /usr/local/bin/firefox
 sudo ln -fs /opt/firefox/browser/chrome/icons/default/default128.png /usr/local/share/pixmaps/firefox.png
 rm -rf firefox*
-cat <<EOF |sudo tee /opt/firefox/defaults/pref/rdx-enhancements.js>/dev/null
-/* Aceleração por GPU */
-pref('gfx.webrender.all', true);
-pref('media.ffmpeg.vaapi.enabled', true);
-
-/* Atualizações automáticas */
-pref('app.update.auto', true);
-/* pref('app.update.enabled', true); */
-/* pref('app.update.silent', true); */
-
-/* Cantos arredondados */
-pref('layers.acceleration.force-enabled', true);
-pref('mozilla.widget.use-argb-visuals', true);
-
-/* Coleta de dados */
-pref('app.shield.optoutstudies.enabled', false);
-pref('browser.crashReports.unsubmittedCheck.autoSubmit2', false);
-pref('browser.discovery.enabled', false);
-pref('datareporting.policy.dataSubmissionEnabled', false);
-pref('datareporting.healthreport.service.enabled', false);
-pref('datareporting.healthreport.uploadEnabled', false);
-pref('toolkit.telemetry.archive.enabled', false);
-pref('toolkit.telemetry.enabled', false);
-pref('toolkit.telemetry.prompted', 2);
-pref('toolkit.telemetry.server', '');
-pref('toolkit.telemetry.unified', false);
-pref('toolkit.telemetry.unifiedIsOptIn', false);
-
-/* CSD */
+cat <<EOF |sudo tee /opt/firefox/defaults/pref/csd.js>/dev/null
 pref("browser.tabs.inTitlebar", 1);
-
-/* Estilos personalizados do usuário */
-pref('toolkit.legacyUserProfileCustomizations.stylesheets', true);
-
-/* Atividade da nova aba */
-pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons', false);
-pref('browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features', false);
-pref('browser.newtabpage.activity-stream.feeds.snippets', false);
-pref('browser.newtabpage.activity-stream.showSponsoredTopSites', false);
-
-/* Modo apenas HTTPS */
-pref('dom.security.https_only_mode', true);
-
-/* Página inicial */
-pref('browser.startup.homepage', 'https://rauldipeas.surge.sh');
-
-/* Recursos nativos desativados */
-pref('browser.tabs.firefox-view', false);
-pref('browser.tabs.tabmanager.enabled', false);
-pref('extensions.pocket.enabled', false);
-
-/* Sugestões de pesquisa */
-pref('browser.urlbar.suggest.bookmark', false);
-pref('browser.search.suggest.enabled', false);
-pref('browser.urlbar.suggest.engines', false);
-pref('browser.urlbar.suggest.openpage', false);
-pref('browser.urlbar.suggest.topsites', false);
 EOF
 cat <<EOF |sudo tee /usr/local/share/applications/firefox.desktop>/dev/null
 [Desktop Entry]
