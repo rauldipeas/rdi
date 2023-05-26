@@ -16,7 +16,7 @@ URIs: https://deb.librewolf.net
 Suites: $distro
 Components: main
 Architectures: amd64
-Signed-By: /usr/share/keyrings/librewolf.gpg
+Signed-By: /etc/apt/trusted.gpg.d/librewolf.gpg
 EOF
 pkcon refresh
 pkcon install librewolf
