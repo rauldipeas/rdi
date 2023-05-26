@@ -41,11 +41,9 @@ pkcon install kdocker
 cat <<EOF |tee /opt/betterbird/betterbird-kdocker>/dev/null
 #!/bin/bash
 set -e
-betterbird "\$@"&
-if [ "\$(pgrep kdocker)" ];then
-	killall -9 kdocker
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-d15 -mq betterbird
-	else
+if [ "\$(pgrep -l betterbird-bin|cut -d ' ' -f2)" == betterbird-bin ]; then
+	betterbird
+else
 	kdocker -i /usr/share/icons/Papirus/22x22/panel/indicator-notification-read.svg	-d15 -mq betterbird
 fi
 EOF
