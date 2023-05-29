@@ -20,3 +20,4 @@ Signed-By: /etc/apt/trusted.gpg.d/librewolf.gpg
 EOF
 pkcon refresh
 pkcon install librewolf
+sudo sed -i 's/Exec=/Exec=MOZ_USE_XINPUT2=1 /g' /usr/share/applications/librewolf.desktop
