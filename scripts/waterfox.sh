@@ -21,7 +21,7 @@ Name=Waterfox
 Comment=Navegue na internet
 GenericName=Navegador de internet
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=waterfox %u
+Exec=MOZ_USE_XINPUT2=1 waterfox %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
