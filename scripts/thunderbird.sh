@@ -37,11 +37,11 @@ pkcon install kdocker
 cat <<EOF |tee /opt/thunderbird/thunderbird-kdocker>/dev/null
 #!/bin/bash
 set -e
-thunderbird "\$@"&
-if [ "\$(pgrep kdocker)" ];then
-	killall -9 kdocker
-	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d15 -mq thunderbird
-	else
+if [ "\$(pgrep -l thunderbird-bin|cut -d ' ' -f2)" == thunderbird-bin ]; then
+	export MOZ_USE_XINPUT2=1
+    thunderbird
+else
+	export MOZ_USE_XINPUT2=1
 	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d15 -mq thunderbird
 fi
 EOF
