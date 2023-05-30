@@ -38,15 +38,16 @@ cat <<EOF |tee /opt/thunderbird/thunderbird-kdocker>/dev/null
 #!/bin/bash
 set -e
 if [ "\$(pgrep -l thunderbird-bin|cut -d ' ' -f2)" == thunderbird-bin ]; then
-	export MOZ_USE_XINPUT2=1
     thunderbird
 else
-	export MOZ_USE_XINPUT2=1
 	kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-d15 -mq thunderbird
 fi
 EOF
 sudo chmod +x /opt/thunderbird/thunderbird-kdocker
 sudo ln -fs /opt/thunderbird/thunderbird-kdocker /usr/local/bin/thunderbird-kdocker
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+export MOZ_USE_XINPUT2=1
+EOF
 
 # Instalação do Birdtray
 #wget -cq --show-progress https://ppa.launchpadcontent.net/linuxuprising/ppa/ubuntu/pool/main/b/birdtray/$(wget -qO- https://ppa.launchpadcontent.net/linuxuprising/ppa/ubuntu/pool/main/b/birdtray/|grep jammy|grep amd64.deb|cut -d '"' -f8|tail -n1)
