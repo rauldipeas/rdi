@@ -20,8 +20,11 @@ Name=Tor Browser
 GenericName=Web Browser
 Comment=Tor Browser  is +1 for privacy and −1 for mass surveillance
 Categories=Network;WebBrowser;Security;
-Exec=MOZ_USE_XINPUT2=1 sh -c '"/opt/tor-browser/Browser/start-tor-browser" --detach || ([ !  -x "/opt/tor-browser/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k
+Exec=sh -c '"/opt/tor-browser/Browser/start-tor-browser" --detach || ([ !  -x "/opt/tor-browser/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k
 X-TorBrowser-ExecShell=./Browser/start-tor-browser --detach
 Icon=tor-browser
 StartupWMClass=Tor Browser
+EOF
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+export MOZ_USE_XINPUT2=1
 EOF
