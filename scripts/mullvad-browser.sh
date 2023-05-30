@@ -20,8 +20,11 @@ Name=Mullvad Browser
 GenericName=Web Browser
 Comment=Mullvad Browser  is +1 for privacy and −1 for mass surveillance
 Categories=Network;WebBrowser;Security;
-Exec=MOZ_USE_XINPUT2=1 sh -c '"/opt/mullvad-browser/Browser/start-mullvad-browser" --detach || ([ !  -x "/opt/mullvad-browser/Browser/start-mullvad-browser" ] && "$(dirname "$*")"/Browser/start-mullvad-browser --detach)' dummy %k
+Exec=sh -c '"/opt/mullvad-browser/Browser/start-mullvad-browser" --detach || ([ !  -x "/opt/mullvad-browser/Browser/start-mullvad-browser" ] && "$(dirname "$*")"/Browser/start-mullvad-browser --detach)' dummy %k
 X-MullvadBrowser-ExecShell=./Browser/start-mullvad-browser --detach
 Icon=mullvad-browser
 StartupWMClass=Mullvad Browser
+EOF
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+export MOZ_USE_XINPUT2=1
 EOF
