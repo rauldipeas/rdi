@@ -20,4 +20,6 @@ Signed-By: /etc/apt/trusted.gpg.d/librewolf.gpg
 EOF
 pkcon refresh
 pkcon install librewolf
-sudo sed -i 's/Exec=/Exec=MOZ_USE_XINPUT2=1 /g' /usr/share/applications/librewolf.desktop
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+export MOZ_USE_XINPUT2=1
+EOF
