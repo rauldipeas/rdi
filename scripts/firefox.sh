@@ -21,7 +21,7 @@ Name=Firefox
 Comment=Navegue na internet
 GenericName=Navegador de internet
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=MOZ_USE_XINPUT2=1 firefox %u
+Exec=firefox %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
@@ -39,4 +39,7 @@ Exec=firefox -new-window
 [Desktop Action new-private-window]
 Name=Abrir uma nova janela no modo privado
 Exec=firefox -private-window
+EOF
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+export MOZ_USE_XINPUT2=1
 EOF
