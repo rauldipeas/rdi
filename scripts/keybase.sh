@@ -12,10 +12,10 @@ cat <<EOF |sudo tee /usr/local/bin/keybase-rsync>/dev/null
 set -e
 sleep 300
 if [ "\$(pgrep -l keybase|cut -d ' ' -f2|head -n1)" == keybase ];then
-    if [ -d /keybase/private/"\$(fd . /keybase/private/|cut -d '/' -f4)" ];then
-        rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(fd . /keybase/private/|cut -d '/' -f4)"
+    if [ -d /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)" ];then
+        rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)"
         while inotifywait -r -e modify,create,delete,move "\$HOME"/Sync; do
-            rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(fd . /keybase/private/|cut -d '/' -f4)"
+            rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)"
         done
     fi
 fi
