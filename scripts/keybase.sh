@@ -10,6 +10,7 @@ mkdir -p "$HOME"/Sync
 cat <<EOF |sudo tee /usr/local/bin/keybase-rsync>/dev/null
 #!/bin/bash
 set -e
+sleep 300
 if [ "\$(pgrep -l keybase|cut -d ' ' -f2|head -n1)" == keybase ];then
     if [ -d /keybase/private/"\$(fd . /keybase/private/|cut -d '/' -f4)" ];then
         rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(fd . /keybase/private/|cut -d '/' -f4)"
