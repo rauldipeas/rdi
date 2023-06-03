@@ -10,14 +10,21 @@ mkdir -p "$HOME"/Sync
 cat <<EOF |sudo tee /usr/local/bin/keybase-rsync>/dev/null
 #!/bin/bash
 set -e
-sleep 300
-if [ "\$(pgrep -l keybase|cut -d ' ' -f2|head -n1)" == keybase ];then
-    if [ -d /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)" ];then
-        rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)"
+sleep 60
+if [ "\$(pgrep -l keybase|cut -d ' ' -f2|grep -v keybase-rsync|head -n1)" == keybase ];then
+    notify-send -u low -a 'Keybase' -i /usr/share/icons/Papirus/64x64/apps/keybase.svg 'Keybase em execução'
+    if [ -d /keybase/private/"\$(ls /keybase/private)" ];then
+        notify-send -u low -a 'Keybase' -i /usr/share/icons/Papirus/64x64/apps/keybase.svg 'Sincronizando arquivos...'
+        rsync -rz --delete "\$HOME"/Sync/ /keybase/private/"\$(ls /keybase/private)"
         while inotifywait -r -e modify,create,delete,move "\$HOME"/Sync; do
-            rsync -rvz --delete "\$HOME"/Sync/ /keybase/private/"\$(find /keybase/private/ -type d|tail -n1|cut -d '/' -f4)"
+            notify-send -u low -a 'Keybase' -i /usr/share/icons/Papirus/64x64/apps/keybase.svg 'Sincronizando arquivos...'
+            rsync -rz --delete "\$HOME"/Sync/ /keybase/private/"\$(ls /keybase/private)"
         done
+        else
+        notify-send -u low -a 'Keybase' -i /usr/share/icons/Papirus/64x64/apps/keybase.svg 'Usuário do Keybase não identificado'
     fi
+    else
+    notify-send -u low -a 'Keybase' -i /usr/share/icons/Papirus/64x64/apps/keybase.svg 'Keybase não iniciado'
 fi
 EOF
 sudo chmod +x /usr/local/bin/keybase-rsync
