@@ -9,7 +9,7 @@ if [ -d /usr/share/icons/Papirus ]; then
     pkcon install hardcode-tray
  
     # Correção dos ícones na área de notificação
-    sudo hardcode-tray --apply --theme Papirus-Dark
+    sudo hardcode-tray --apply
     else
     bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/rdi/main/rdi.sh) papirus
     bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/rdi/main/rdi.sh) hardcode-tray
