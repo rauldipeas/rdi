@@ -8,6 +8,6 @@ pkcon install google-chrome
 # Correção dos ícones na área de notificação
 if [ -d /usr/share/icons/Papirus ]; then
     if [ -f /usr/bin/hardcode-tray ]; then
-        sudo hardcode-tray --apply --theme Papirus-Dark
+        sudo hardcode-tray --apply
     fi
 fi
