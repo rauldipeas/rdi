@@ -40,7 +40,7 @@ set -e
 if [ "\$(pgrep -l thunderbird-bin|cut -d ' ' -f2)" == thunderbird-bin ]; then
     thunderbird
 else
-    kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird.svg	-I /usr/share/icons/Papirus/22x22/panel/thunderbird-attention-panel.svg -d15 -mq thunderbird
+    kdocker -i /usr/share/icons/Papirus/22x22/panel/thunderbird-panel.svg -I /usr/share/icons/Papirus/22x22/panel/thunderbird-attention-panel.svg -d15 -mq thunderbird
 fi
 EOF
 sudo chmod +x /opt/thunderbird/thunderbird-kdocker
