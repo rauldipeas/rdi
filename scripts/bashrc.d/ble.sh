@@ -14,5 +14,6 @@ EOF
 cat <<EOF |tee "$HOME"/.blerc>/dev/null
 ble-face -s auto_complete fg=238,bg=000
 bleopt complete_auto_delay=300
+bleopt complete_requote_threshold=-1
 EOF
 rm -rf ble.sh*
