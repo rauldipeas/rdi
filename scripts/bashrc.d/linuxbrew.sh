@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Depende do bashrc.d
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
+
 # Instalação do Linuxbrew
 bash <(wget -qO- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)
 
