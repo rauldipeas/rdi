@@ -2,7 +2,7 @@
 set -e
 
 # Depende do pipx
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pipx.sh
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bashrc.d/pipx.sh
 
 # Instalação do rtcqs
 sudo apt install python3-tk
