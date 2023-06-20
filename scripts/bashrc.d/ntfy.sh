@@ -5,7 +5,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
 
 # Depende do pipx
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pipx.sh
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bashrc.d/pipx.sh
 
 # Instalação do ntfy
 pkcon install libnotify-bin pipx
