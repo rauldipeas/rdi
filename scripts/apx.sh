@@ -1,9 +1,12 @@
 #!/bin/bash
 set -e
 
+# Depende do Pacstall
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
+
 # Instalação do apx
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install apx docker.io
+pkcon install docker.io
+pacstall -I apx
 pacstall -I distrobox
 sudo sed -i 's@share/apx@bin@g' /etc/apx/config.json
 
