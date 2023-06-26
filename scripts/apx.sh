@@ -6,7 +6,7 @@ set -e
 
 # Instalação do apx
 pkcon install docker.io
-pacstall -I apx
+pacstall -I apx-git
 pacstall -I distrobox
 sudo sed -i 's@share/apx@bin@g' /etc/apx/config.json
 
