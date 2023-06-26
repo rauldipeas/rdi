@@ -4,5 +4,5 @@ set -e
 # Depende do Pacstall
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
 
-# Instalação do Lutris
-pacstall -I lutris
+# Instalação do Electron Mail
+pacstall -I electronmail-deb

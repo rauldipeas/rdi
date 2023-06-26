@@ -1,9 +1,12 @@
 #!/bin/bash
 set -e
 
+# Depende do Pacstall
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
+
 # Instalação do MEGA
-bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install megasync
+pacstall -I megasync-deb
+pkcon refresh
 
 # Integração com o gerenciador de arquivos
 if [ -d /usr/share/applications/org.kde.dolphin.desktop ]; then
