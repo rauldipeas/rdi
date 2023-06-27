@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-# Depende do Pacstall
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
-
 # bashrc.d
 mkdir -p "$HOME"/.bashrc.d
 sed -i '/^# bashrc.d/{N;N;N;d;}' "$HOME"/.bashrc
@@ -22,8 +19,8 @@ pkcon install\
     fd\
     gcp\
     git\
+    lsd\
     lnav\
     pet\
     rmtrash\
     silversearcher-ag
-pacstall -I lsd-deb

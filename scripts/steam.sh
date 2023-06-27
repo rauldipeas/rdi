@@ -1,16 +1,14 @@
 #!/bin/bash
 set -e
 
-# Depende do Pacstall
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
+# Depende do MangoHUD
+#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/mangohud.sh
 
 # Instalação da Steam
-pacstall -I steam-launcher-deb
+wget -cq --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
+pkcon install-local ./steam.deb
 pkcon refresh
 pkcon install steam-libs-amd64 steam-libs-i386
-
-# Instalação do MangoHud
-pacstall -I mangohud
 
 # Instalação do Steam Tinker Launch
 pacstall -I steamtinkerlaunch-git

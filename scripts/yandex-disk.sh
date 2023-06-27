@@ -1,13 +1,10 @@
 #!/bin/bash
 set -e
 
-# Depende do Pacstall
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
-
 # Instalação do Yandex Disk
+wget -cq --show-progress https://repo.yandex.ru/yandex-disk/yandex-disk_latest_amd64.deb
 sudo add-apt-repository ppa:slytomcat/ppa
-pacstall -I yandex-disk-deb
-pkcon install yd-tools
+sudo apt install ./yandex-disk*.deb yd-tools
 if [ -d /usr/share/icons/Papirus ];then
     if [ -f /usr/bin/convert ];then
         cat <<EOF |sudo tee /usr/share/yd-tools/fix-yandex-disk-indicator.sh>/dev/null

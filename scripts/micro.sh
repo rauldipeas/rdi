@@ -1,11 +1,8 @@
 #!/bin/bash
 set -e
 
-# Depende do Pacstall
-#xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/pacstall.sh
-
-# Instalação do micro
-pacstall -I  micro
+# Instalação do microbash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
+pkcon install micro
 mkdir -p "$HOME"/.config/micro
 cat <<EOF |tee "$HOME"/.config/micro/settings.json>/dev/null
 {
