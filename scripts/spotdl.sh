@@ -15,7 +15,7 @@ Type=Application
 Name=SpotDL
 Icon=wihotspot
 NoDisplay=false
-Exec=spotdl
+Exec=spotdl web
 Terminal=false
 X-GNOME-UsesNotifications=true
 EOF
