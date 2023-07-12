@@ -37,7 +37,11 @@ Exec=betterbird -compose
 EOF
 
 # KDocker
-pkcon install kdocker
+if [ -f /usr/bin/kdocker ];then
+    echo 'KDocker encontrado'
+    else
+    pkcon install kdocker
+fi
 cat <<EOF |tee /opt/betterbird/betterbird-kdocker>/dev/null
 #!/bin/bash
 set -e
