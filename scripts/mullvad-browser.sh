@@ -25,6 +25,6 @@ X-MullvadBrowser-ExecShell=./Browser/start-mullvad-browser --detach
 Icon=mullvad-browser
 StartupWMClass=Mullvad Browser
 EOF
-cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh>/dev/null
 export MOZ_USE_XINPUT2=1
 EOF
