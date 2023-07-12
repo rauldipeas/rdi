@@ -25,6 +25,6 @@ X-TorBrowser-ExecShell=./Browser/start-tor-browser --detach
 Icon=tor-browser
 StartupWMClass=Tor Browser
 EOF
-cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh>/dev/null
 export MOZ_USE_XINPUT2=1
 EOF
