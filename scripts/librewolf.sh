@@ -20,6 +20,6 @@ Signed-By: /etc/apt/trusted.gpg.d/librewolf.gpg
 EOF
 pkcon refresh
 pkcon install librewolf
-cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh>/dev/null
 export MOZ_USE_XINPUT2=1
 EOF
