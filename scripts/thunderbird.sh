@@ -34,7 +34,11 @@ Exec=thunderbird -compose
 EOF
 
 # KDocker
-pkcon install kdocker
+if [ -f /usr/bin/kdocker ];then
+    echo 'KDocker encontrado'
+    else
+    pkcon install kdocker
+fi
 cat <<EOF |tee /opt/thunderbird/thunderbird-kdocker>/dev/null
 #!/bin/bash
 set -e
