@@ -40,6 +40,6 @@ Exec=firefox -new-window
 Name=Abrir uma nova janela no modo privado
 Exec=firefox -private-window
 EOF
-cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh
+cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh>/dev/null
 export MOZ_USE_XINPUT2=1
 EOF
