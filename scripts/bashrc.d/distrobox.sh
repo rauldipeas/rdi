@@ -17,8 +17,13 @@ pkcon install podman
 #EOF
 
 #distrobox-create --name 'archlinux' --image archlinux:latest
-
 #distrobox enter archlinux
+#pacman -S base-devel git
+#git clone -q https://aur.archlinux.org/yay.git
+#cd yay
+#makepkg -si
+#cd
+
 #pacman -S $1
 #distrobox-export --app $1
 
