@@ -6,7 +6,7 @@ set -e
 
 # Instalação do distrobox
 wget -qO- https://raw.githubusercontent.com/89luca89/distrobox/main/install|sh -s -- --prefix ~/.distrobox
-cat <<EOF |tee "$HOME"/.bashrc.d/distrobox.sh
+cat <<EOF |tee "$HOME"/.bashrc.d/distrobox.sh>/dev/null
 PATH="$PATH":"$HOME"/.distrobox/bin
 EOF
 pkcon install podman
