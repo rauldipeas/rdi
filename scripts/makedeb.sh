@@ -13,5 +13,5 @@ if [ -f /usr/bin/nala ];then
     else
     sudo apt update
 fi
-sudo apt install mist
-mist update
+#sudo apt install mist
+#mist update
