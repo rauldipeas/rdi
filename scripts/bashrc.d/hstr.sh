@@ -5,7 +5,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
 
 # Instalação do hstr
-pkcon install hstr
+sudo apt install hstr
 cat <<EOF |tee "$HOME"/.bashrc.d/hstr.bash>/dev/null
 lias hh=hstr
 export HSTR_CONFIG=hicolor

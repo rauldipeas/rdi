@@ -13,7 +13,7 @@ EOF
 
 # Ferramentas CLI
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install\
+sudo apt install\
     apt-rollback\
     deborphan\
     fd\

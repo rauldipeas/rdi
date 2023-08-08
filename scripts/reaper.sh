@@ -3,7 +3,7 @@ set -e
 
 # Instalação do REAPER
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install cockos-reaper
+sudo apt install cockos-reaper
 mkdir -p "$HOME"/.config/REAPER/{ColorThemes,LangPack,UserPlugins}
 wget -q --show-progress -O "$HOME"/.config/REAPER/ColorThemes/Default_6.0.ReaperThemeZip https://stash.reaper.fm/40797/Mammoth.ReaperThemeZip
 wget -q --show-progress -O "$HOME"/.config/REAPER/LangPack/pt-BR.ReaperLangPack https://stash.reaper.fm"$(wget -qO- https://stash.reaper.fm/tag/Language-Packs|grep '/pt-BR.ReaperLangPack'|tail -n1|cut -d '"' -f2|sed 's/\/v//g')"

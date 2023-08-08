@@ -3,4 +3,4 @@ set -e
 
 # Instalação do GameHub
 sudo add-apt-repository ppa:tkashkin/gamehub
-pkcon install com.github.tkashkin.gamehub
+sudo apt install com.github.tkashkin.gamehub

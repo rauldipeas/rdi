@@ -2,4 +2,4 @@
 set -e
 
 # Instalar pacotes de linguagem
-pkcon install "$(check-language-support)"
+sudo apt install "$(check-language-support)"

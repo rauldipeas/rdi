@@ -3,7 +3,7 @@ set -e
 
 # Instalação do PeaZip
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install peazip
+sudo apt install peazip
 
 # Configuração da integração com o ambiente gráfico para o KDE e XFCE
 if [ -f /usr/share/applications/org.kde.dolphin.desktop ];then

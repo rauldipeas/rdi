@@ -5,7 +5,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
 
 # Instalação do pipx
-pkcon install pipx
+sudo apt install pipx
 sudo mkdir -p /opt/pipx/bin
 sudo chmod 777 -R /opt/pipx
 cat <<EOF |sudo tee /etc/X11/Xsession.d/99pipx

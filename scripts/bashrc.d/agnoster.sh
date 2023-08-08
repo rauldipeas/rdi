@@ -5,7 +5,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
 
 # Instalação do agnoster
-pkcon install git
+sudo apt install git
 mkdir -p "$HOME"/.bashrc.d/themes
 rm -rf "$HOME"/.bashrc.d/themes/agnoster
 git clone -q https://github.com/speedenator/agnoster-bash "$HOME"/.bashrc.d/themes/agnoster

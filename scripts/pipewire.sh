@@ -4,7 +4,7 @@ set -e
 # Instalação do PipeWire
 sudo add-apt-repository -n ppa:pipewire-debian/pipewire-upstream
 sudo add-apt-repository ppa:pipewire-debian/wireplumber-upstream
-pkcon install\
+sudo apt install\
     gstreamer1.0-pipewire\
     libpipewire-0.3-{0,dev,modules}\
     libpipewire-module-x11-bell\
@@ -26,7 +26,7 @@ pactl info|grep pulseaudio
 #    filter-chain.service
 #systemctl --user unmask pulseaudio
 #systemctl --user --now enable pulseaudio.{socket,service}
-#pkcon install ppa-purge
+#sudo apt install ppa-purge
 #sudo ppa-purge ppa:pipewire-debian/pipewire-upstream
 #sudo ppa-purge ppa:pipewire-debian/wireplumber-upstream
 #sudo rm -r /etc/pipewire

@@ -6,7 +6,7 @@ set -e
 
 # Instalação do ambiente SSH
 sudo apt install --no-install-recommends dropbear
-pkcon install openssh-sftp-server
+sudo apt install openssh-sftp-server
 cat <<EOF |tee "$HOME"/.bashrc.d/ssh-environment.bash>/dev/null
 export DISPLAY=:0
 export LANG=pt_BR.UTF-8

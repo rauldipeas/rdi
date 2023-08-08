@@ -6,9 +6,13 @@ set -e
 
 # Instalação da Steam
 wget -cq --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-pkcon install-local ./steam.deb
-pkcon refresh
-pkcon install steam-libs-amd64 steam-libs-i386
+sudo apt install-local ./steam.deb
+if [ -f /usr/bin/nala ];then
+    sudo nala update
+    else
+    sudo apt update
+fi
+sudo apt install steam-libs-amd64 steam-libs-i386
 
 # Instalação do Steam Tinker Launch
 pacstall -I steamtinkerlaunch-git

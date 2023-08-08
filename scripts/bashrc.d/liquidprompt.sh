@@ -6,7 +6,7 @@ set -e
 
 # Instalação do liquidprompt
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install liquidprompt
+sudo apt install liquidprompt
 cp /usr/share/liquidprompt/liquidpromptrc-dist .config/liquidpromptrc
 sed -i 's/debian.theme/powerline.theme/g' "$HOME"/.config/liquidpromptrc
 cat <<EOF |tee "$HOME"/.bashrc.d/liquidprompt.bash>/dev/null

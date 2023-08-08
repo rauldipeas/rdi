@@ -18,8 +18,12 @@ Components: main
 Architectures: amd64
 Signed-By: /etc/apt/trusted.gpg.d/librewolf.gpg
 EOF
-pkcon refresh
-pkcon install librewolf
+if [ -f /usr/bin/nala ];then
+    sudo nala update
+    else
+    sudo apt update
+fi
+sudo apt install librewolf
 cat <<EOF |sudo tee /etc/profile.d/mozilla-pixel-perfect-scrolling.sh>/dev/null
 export MOZ_USE_XINPUT2=1
 EOF

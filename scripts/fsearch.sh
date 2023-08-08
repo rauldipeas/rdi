@@ -3,7 +3,7 @@ set -e
 
 # Instalação do FSearch
 sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-stable
-pkcon install fsearch
+sudo apt install fsearch
 
 # Correção no ícone do lançador
 cat <<EOF |sudo tee /etc/apt/apt.conf.d/100fsearch-icon>/dev/null

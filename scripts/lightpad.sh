@@ -3,4 +3,4 @@ set -e
 
 # Instalação do LightPad
 sudo add-apt-repository ppa:libredeb/lightpad
-pkcon install com.github.libredeb.lightpad
+sudo apt install com.github.libredeb.lightpad

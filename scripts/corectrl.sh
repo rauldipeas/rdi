@@ -16,7 +16,7 @@ Pin-Priority: 500
 EOF
 
 # Instalação do CoreCtl
-pkcon install corectrl
+sudo apt install corectrl
 
 # Configuração para o lançamento do CoreCtl no início da sessão
 cp /usr/share/applications/org.corectrl.corectrl.desktop "$HOME"/.config/autostart/org.corectrl.corectrl.desktop

@@ -3,7 +3,7 @@ set -e
 
 # Instalação do fzf
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install bat fzf
+sudo apt install bat fzf
 cat <<EOF |sudo tee /usr/local/bin/fzf-dir>/dev/null
 #!/bin/bash
 set -e

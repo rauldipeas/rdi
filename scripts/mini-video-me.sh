@@ -3,4 +3,4 @@ set -e
 
 # Instalação do Mini video me
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install mini-video-me
+sudo apt install mini-video-me

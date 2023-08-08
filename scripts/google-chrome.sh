@@ -3,7 +3,7 @@ set -e
 
 # Instalação do Google Chrome
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install google-chrome-stable
+sudo apt install google-chrome-stable
 
 # Correção dos ícones na área de notificação
 if [ -d /usr/share/icons/Papirus ]; then

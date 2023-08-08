@@ -8,7 +8,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bashrc.d/distrobox.sh
 
 # Instalação do apx
-pkcon install docker.io
+sudo apt install docker.io
 pacstall -I apx-git
 sudo sed -i 's@share/apx@bin@g' /etc/apx/config.json
 

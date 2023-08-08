@@ -4,8 +4,12 @@ set -e
 # Instalação do Keybase
 wget -qO- https://keybase.io/docs/server_security/code_signing_key.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/keybase-keyring.gpg
 echo 'deb http://prerelease.keybase.io/deb stable main'|sudo tee /etc/apt/sources.list.d/keybase.list>/dev/null
-pkcon refresh
-pkcon install keybase #inotify-tools
+if [ -f /usr/bin/nala ];then
+    sudo nala update
+    else
+    sudo apt update
+fi
+sudo apt install keybase #inotify-tools
 #mkdir -p "$HOME"/Sync
 #cat <<EOF |sudo tee /usr/local/bin/keybase-rsync>/dev/null
 ##!/bin/bash

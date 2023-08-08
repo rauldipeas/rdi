@@ -6,7 +6,7 @@ set -e
 
 # Instalação do Beeper
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install beeper
+sudo apt install beeper
 
 # Correção dos ícones na área de notificação
 if [ -d /usr/share/icons/Papirus ]; then

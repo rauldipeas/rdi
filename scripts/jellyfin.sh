@@ -13,7 +13,11 @@ Components: main
 Architectures: $(dpkg --print-architecture)
 Signed-By: /etc/apt/trusted.gpg.d/jellyfin.gpg
 EOF
-pkcon refresh
-pkcon install jellyfin
+if [ -f /usr/bin/nala ];then
+    sudo nala update
+    else
+    sudo apt update
+fi
+sudo apt install jellyfin
 sudo systemctl enable jellyfin.service
 sudo systemctl start jellyfin.service

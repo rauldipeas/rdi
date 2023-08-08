@@ -2,7 +2,7 @@
 set -e
 
 # Instalação do Audacity
-pkcon install audacity
+sudo apt install audacity
 mkdir -p "$HOME"/.audacity-data/Theme
 wget -cO "$HOME"/.audacity-data/Theme/ImageCache.png https://github.com/visoart/audacity-themes/raw/master/themes/dark-blue/ImageCache.png
 

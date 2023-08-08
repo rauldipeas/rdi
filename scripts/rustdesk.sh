@@ -3,7 +3,7 @@ set -e
 
 # Instalação do RustDesk
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install rustdesk
+sudo apt install rustdesk
 
 # Correção no ícone do lançador
 cat <<EOF |sudo tee /etc/apt/apt.conf.d/100rustdesk-icon>/dev/null

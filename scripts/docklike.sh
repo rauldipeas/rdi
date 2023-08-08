@@ -3,4 +3,4 @@ set -e
 
 # Instalação do Docklike
 sudo add-apt-repository ppa:xubuntu-dev/extras
-pkcon install xfce4-docklike-plugin
+sudo apt install xfce4-docklike-plugin

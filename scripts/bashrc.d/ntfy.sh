@@ -8,7 +8,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bashrc.d/pipx.sh
 
 # Instalação do ntfy
-pkcon install libnotify-bin pipx
+sudo apt install libnotify-bin pipx
 pipx install --system-site-packages ntfy
 cat <<EOF |tee "$HOME"/.bashrc.d/ntfy.bash>/dev/null
 PATH="\$PATH":"\$HOME"/.local/bin

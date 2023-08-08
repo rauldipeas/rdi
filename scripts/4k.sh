@@ -3,7 +3,7 @@ set -e
 
 # Instalação do 4K
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install\
+sudo apt install\
     4kvideodownloader\
     4ktokkit\
     4kstogram\

@@ -3,17 +3,17 @@ set -e
 
 # Adição do repositório do KXStudio
 wget -cq --show-progress http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/"$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/|grep all.deb|tail -n1|cut -d '"' -f8)"
-pkcon install-local ./kxstudio-repos*.deb
+sudo apt install-local ./kxstudio-repos*.deb
 sudo add-apt-repository -ny multiverse
 sudo add-apt-repository -y universe
 
 # Instalação do WINE TkG
 bash <(wget -qO- https://raw.githubusercontent.com/rauldipeas/apt-repository/main/apt-repository.sh)
-pkcon install q4wine wine-tkg winetricks
+sudo apt install q4wine wine-tkg winetricks
 
 # Instalação do WINEASIO
 echo 'jackd2 jackd/tweak_rt_limits string true'|sudo debconf-set-selections
-pkcon install alsa-firmware cadence wineasio
+sudo apt install alsa-firmware cadence wineasio
 
 # Links das biblioecas para o WINE TkG
 sudo ln -sv /usr/lib/i386-linux-gnu/wine/wineasio.dll /opt/wine-tkg/lib/wine/i386-windows/wineasio.dll

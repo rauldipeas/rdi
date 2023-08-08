@@ -5,7 +5,7 @@ set -e
 #xdg-open https://github.com/rauldipeas/rdi/blob/main/scripts/bash-enhancements.sh
 
 # Instalação do bash line editor (ble.sh)
-pkcon install build-essential git
+sudo apt install build-essential git
 git clone -q --recursive https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh install PREFIX="$HOME"/.local>/dev/null
 cat <<EOF |tee "$HOME"/.bashrc.d/blesh.bash>/dev/null

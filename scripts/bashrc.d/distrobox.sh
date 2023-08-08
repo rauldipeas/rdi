@@ -9,7 +9,7 @@ wget -qO- https://raw.githubusercontent.com/89luca89/distrobox/main/install|sh -
 cat <<EOF |tee "$HOME"/.bashrc.d/distrobox.bash>/dev/null
 export PATH="\$HOME/.distrobox/bin:\$PATH"
 EOF
-pkcon install podman
+sudo apt install podman
 
 #cat <<EOF |sudo tee -a /etc/containers/registries.conf.d/shortnames.conf>/dev/null
 #  # Archlinux
