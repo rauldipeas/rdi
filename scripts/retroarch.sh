@@ -3,7 +3,7 @@ set -e
 
 # Instalação do EmulationStation
 wget -cq --show-progress -O emulationstation-de_x64.deb "$(wget -qO- https://es-de.org|grep x64.deb|head -n1|cut -d '=' -f4|cut -d '>' -f1)"
-sudo apt install-local emulationstation-de_x64.deb
+sudo apt install emulationstation-de_x64.deb
 
 # Instalação do tema EpicNoir para o EmulationStation
 sudo apt install git

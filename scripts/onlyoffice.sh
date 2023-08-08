@@ -12,4 +12,4 @@ fi
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true|sudo debconf-set-selections
 sudo apt install onlyoffice-desktopeditors
 #wget -cq --show-progress https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors_amd64.deb
-#sudo apt install-local ./onlyoffice-desktopeditors_amd64.deb
+#sudo apt install ./onlyoffice-desktopeditors_amd64.deb

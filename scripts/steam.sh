@@ -6,7 +6,7 @@ set -e
 
 # Instalação da Steam
 wget -cq --show-progress https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-sudo apt install-local ./steam.deb
+sudo apt install ./steam.deb
 if [ -f /usr/bin/nala ];then
     sudo nala update
     else

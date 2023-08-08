@@ -3,7 +3,7 @@ set -e
 
 # Adição do repositório do KXStudio
 wget -cq --show-progress http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/"$(wget -qO- http://ppa.launchpad.net/kxstudio-debian/kxstudio/ubuntu/pool/main/k/kxstudio-repos/|grep all.deb|tail -n1|cut -d '"' -f8)"
-sudo apt install-local ./kxstudio-repos*.deb
+sudo apt install ./kxstudio-repos*.deb
 sudo add-apt-repository -ny multiverse
 sudo add-apt-repository -y universe
 

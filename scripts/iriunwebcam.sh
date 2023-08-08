@@ -9,7 +9,7 @@ if [ -f /usr/bin/mainline ]; then
 
     # Instalação do v4l2loopback-dkms
     wget -qc --show-progress http://mirrors.kernel.org/ubuntu/pool/universe/v/v4l2loopback/$(wget -qO- http://mirrors.kernel.org/ubuntu/pool/universe/v/v4l2loopback/|grep v4l2loopback-dkms|grep .deb|tail -n4|head -n1|cut -d '"' -f2)
-    sudo apt install-local ./v4l2loopback-dkms*.deb
+    sudo apt install ./v4l2loopback-dkms*.deb
 fi
 
 # Instalação do Iriun Webcam
