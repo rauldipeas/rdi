@@ -3,7 +3,7 @@ set -e
 
 # Instalação do Thunderbird
 #wget -cq --show-progress -O thunderbird-latest-linux64-pt-br.tar.bz2 'https://download.mozilla.org/?product=thunderbird-latest&os=linux64&lang=pt-BR'
-wget -cq --show-progress -O thunderbird-latest-linux64-pt-br.tar.bz2 $(wget -qO- https://www.thunderbird.net/pt-BR/|grep linux64|cut -d '"' -f2|head -n1)
+wget -cq --show-progress -O thunderbird-latest-linux64-pt-br.tar.bz2 "$(wget -qO- https://www.thunderbird.net/pt-BR/|grep linux64|cut -d '"' -f2|head -n1)"
 tar fjx thunderbird-latest-linux64-pt-br.tar.bz2
 sudo mkdir -p /opt/thunderbird
 sudo chmod 777 /opt/thunderbird
