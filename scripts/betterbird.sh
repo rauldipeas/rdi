@@ -3,10 +3,12 @@ set -e
 
 # Instalação do Betterbird
 wget -cq --show-progress -O betterbird-latest.pt-BR.linux-x86_64.tar.bz2 'https://www.betterbird.eu/downloads/get.php?os=linux&lang=pt-BR&version=release'
+#wget -cq --show-progress -O betterbird-latest.pt-BR.linux-x86_64.tar.bz2 'https://www.betterbird.eu/downloads/get.php?os=linux&lang=en-US&version=future' #115-preview
 tar fjx betterbird-latest.pt-BR.linux-x86_64.tar.bz2
 sudo mkdir -p /opt/betterbird
 sudo chmod 777 /opt/betterbird
 mv betterbird/* /opt/betterbird/
+rm -rf betterbird*
 sudo mkdir -p /usr/local/bin /usr/local/share/applications /usr/local/share/pixmaps
 sudo ln -fs /opt/betterbird/betterbird /usr/local/bin/betterbird
 sudo ln -fs /opt/betterbird/chrome/icons/default/default128.png /usr/local/share/pixmaps/betterbird.png
